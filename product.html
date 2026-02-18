@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER HOME - Карточка товара</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ATELIER HOME</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
+                    <li>
+                        <button id="auth-btn" class="auth-btn">
+                            <i class="fas fa-user"></i>
+                            <span id="auth-text">Войти</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="auth-modal" class="auth-modal">
+        <!-- То же модальное окно -->
+        <div class="auth-modal-content">
+            <button class="close-modal">&times;</button>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember">
+                        Запомнить меня
+                    </label>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn-auth">Войти</button>
+            </form>
+
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="register-name">Имя</label>
+                    <input type="text" id="register-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Пароль</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Подтвердите пароль</label>
+                    <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" name="agreement" required>
+                        Я согласен с условиями использования
+                    </label>
+                </div>
+                <button type="submit" class="btn-auth">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / <span id="product-category">Декоративные фигурки</span>
+        </div>
+
+        <section id="product-card" class="product-card-section">
+            <div class="product-card-container" id="product-card-container">
+                <!-- Данные товара загружаются через JavaScript -->
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Отзывы покупателей</h2>
+            <div class="reviews-container" id="reviews-container">
+                <!-- Отзывы загружаются через JavaScript -->
+            </div>
+            
+            <div class="add-review">
+                <h3>Оставить отзыв</h3>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="review-name">Ваше имя</label>
+                        <input type="text" id="review-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-rating">Оценка</label>
+                        <select id="review-rating" required>
+                            <option value="5">5 - Отлично</option>
+                            <option value="4">4 - Хорошо</option>
+                            <option value="3">3 - Нормально</option>
+                            <option value="2">2 - Плохо</option>
+                            <option value="1">1 - Ужасно</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Ваш отзыв</label>
+                        <textarea id="review-text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit-review">Отправить отзыв</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="related-products">
+            <h3>Похожие товары</h3>
+            <div class="products-container" id="related-products-container">
+                <!-- Похожие товары загружаются через JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ATELIER HOME</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

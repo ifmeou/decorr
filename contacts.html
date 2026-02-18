@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER HOME - Контакты</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ATELIER HOME</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                    <li><a href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
+                    <li>
+                        <button id="auth-btn" class="auth-btn">
+                            <i class="fas fa-user"></i>
+                            <span id="auth-text">Войти</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="auth-modal" class="auth-modal">
+        <!-- То же модальное окно -->
+        <div class="auth-modal-content">
+            <button class="close-modal">&times;</button>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember">
+                        Запомнить меня
+                    </label>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn-auth">Войти</button>
+            </form>
+
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="register-name">Имя</label>
+                    <input type="text" id="register-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Пароль</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Подтвердите пароль</label>
+                    <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" name="agreement" required>
+                        Я согласен с условиями использования
+                    </label>
+                </div>
+                <button type="submit" class="btn-auth">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section id="contacts-page">
+            <h2>Контакты</h2>
+            
+            <div class="contacts-grid">
+                <div class="contact-info-card">
+                    <h3>Свяжитесь с нами</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Адрес шоурума:</h4>
+                            <p>г. Москва, ул. Примерная, д. 123<br>ТЦ "Дом", 2 этаж</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон:</h4>
+                            <p>+7 (495) 123-45-67</p>
+                            <p>+7 (800) 123-45-67 (бесплатно по России)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email:</h4>
+                            <p>info@atelierhome.ru</p>
+                            <p>shop@atelierhome.ru (для заказов)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Режим работы:</h4>
+                            <p>Пн-Пт: 9:00-20:00</p>
+                            <p>Сб-Вс: 10:00-18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="delivery-info-card">
+                    <h3>Информация о доставке</h3>
+                    
+                    <div class="delivery-method">
+                        <h4>Курьерская доставка</h4>
+                        <p><strong>Стоимость:</strong> 300 ₽</p>
+                        <p><strong>Сроки:</strong> 1-3 рабочих дня</p>
+                        <p><strong>Зона доставки:</strong> Москва и Московская область</p>
+                    </div>
+
+                    <div class="delivery-method">
+                        <h4>Самовывоз</h4>
+                        <p><strong>Стоимость:</strong> Бесплатно</p>
+                        <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 123</p>
+                        <p><strong>Время работы:</strong> Пн-Вс с 10:00 до 20:00</p>
+                    </div>
+
+                    <div class="delivery-method">
+                        <h4>Почта России</h4>
+                        <p><strong>Стоимость:</strong> от 350 ₽</p>
+                        <p><strong>Сроки:</strong> 5-14 рабочих дней</p>
+                        <p><strong>Отслеживание:</strong> Трек-номер отправляется на email</p>
+                    </div>
+
+                    <div class="payment-info">
+                        <h4>Способы оплаты:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Наличные при получении</li>
+                            <li><i class="fas fa-check"></i> Банковская карта онлайн</li>
+                            <li><i class="fas fa-check"></i> Безналичный расчет для юр. лиц</li>
+                            <li><i class="fas fa-check"></i> Apple Pay / Google Pay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h3>Часто задаваемые вопросы</h3>
+                
+                <div class="faq-item">
+                    <h4>Как оформить заказ?</h4>
+                    <p>Вы можете добавить товары в корзину на сайте или связаться с нами по телефону для консультации.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Можно ли вернуть товар?</h4>
+                    <p>Да, у нас действует гарантия 14 дней на возврат товара надлежащего качества.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Есть ли скидки для постоянных клиентов?</h4>
+                    <p>Да, после регистрации на сайте вы получаете накопительную скидку до 10%.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ATELIER HOME</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

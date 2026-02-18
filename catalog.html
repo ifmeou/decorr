@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER HOME - Каталог</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ATELIER HOME</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
+                    <li>
+                        <button id="auth-btn" class="auth-btn">
+                            <i class="fas fa-user"></i>
+                            <span id="auth-text">Войти</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="auth-modal" class="auth-modal">
+        <!-- То же модальное окно -->
+    </div>
+
+    <main>
+        <section id="catalog-header">
+            <h2>Каталог товаров</h2>
+            <p class="intro">Декоративные мелочи для создания уюта в вашем доме</p>
+            
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <label for="category">Категория:</label>
+                    <select id="category" onchange="filterProducts()">
+                        <option value="all">Все товары</option>
+                        <option value="figurines">Декоративные фигурки</option>
+                        <option value="frames">Фоторамки</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Сортировка:</label>
+                    <select id="sort" onchange="filterProducts()">
+                        <option value="default">По умолчанию</option>
+                        <option value="price-asc">Цена: по возрастанию</option>
+                        <option value="price-desc">Цена: по убыванию</option>
+                        <option value="name">По названию</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="products-container" id="products-container">
+                <!-- Товары загружаются через JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ATELIER HOME</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

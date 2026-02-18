@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER HOME - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ATELIER HOME</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
+                    <li>
+                        <button id="auth-btn" class="auth-btn">
+                            <i class="fas fa-user"></i>
+                            <span id="auth-text">Войти</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-content">
+            <button class="close-modal">&times;</button>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember">
+                        Запомнить меня
+                    </label>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn-auth">Войти</button>
+            </form>
+
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="register-name">Имя</label>
+                    <input type="text" id="register-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Пароль</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Подтвердите пароль</label>
+                    <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" name="agreement" required>
+                        Я согласен с условиями использования
+                    </label>
+                </div>
+                <button type="submit" class="btn-auth">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section id="about">
+            <h2>О магазине ATELIER HOME</h2>
+            <div class="about-content">
+                <p>ATELIER HOME — это магазин декоративных мелочей для дома. Мы собираем коллекции уникальных предметов интерьера, которые помогут создать уют и индивидуальность вашего пространства.</p>
+                <p>Каждое изделие проходит тщательный отбор, чтобы радовать вас качеством и дизайном. В нашем ассортименте вы найдете декоративные фигурки, фоторамки и интерьерные аксессуары на любой вкус.</p>
+                <p>Мы работаем с проверенными мастерами и производителями, чтобы предложить вам только лучшее для вашего дома.</p>
+            </div>
+        </section>
+
+        <section id="popular">
+            <h2>Популярные товары</h2>
+            <div class="products-container" id="popular-products">
+                <!-- Товары загружаются через JavaScript -->
+            </div>
+            <div class="center-btn">
+                <a href="catalog.html" class="btn-secondary">Смотреть все товары</a>
+            </div>
+        </section>
+
+        <section id="advantages">
+            <h2>Почему выбирают нас</h2>
+            <div class="advantages-container">
+                <div class="advantage">
+                    <i class="fas fa-truck"></i>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставляем по всей России от 1 дня</p>
+                </div>
+                <div class="advantage">
+                    <i class="fas fa-gem"></i>
+                    <h3>Качество</h3>
+                    <p>Только проверенные материалы</p>
+                </div>
+                <div class="advantage">
+                    <i class="fas fa-heart"></i>
+                    <h3>Уникальный дизайн</h3>
+                    <p>Авторские работы и эксклюзивы</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ATELIER HOME</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
